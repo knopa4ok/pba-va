@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="WebServers">
+    <option name="servers">
+      <webServer id="4ea82af5-57f3-446b-b514-a6d82a08f48f" name="pbdva.malinovski.tk" url="http://ftp.malinovski.tk">
+        <fileTransfer host="ftp.malinovski.tk" port="21" rootFolder="/pbdva">
+          <advancedOptions>
+            <advancedOptions dataProtectionLevel="Private" passiveMode="true" shareSSLContext="true" />
+          </advancedOptions>
+          <option name="port" value="21" />
+        </fileTransfer>
+      </webServer>
+    </option>
+  </component>
+</project>

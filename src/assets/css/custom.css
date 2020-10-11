@@ -1,0 +1,98 @@
+@font-face {
+   /* font-family: 'led_calculatorregular';
+    src: url('../fonts/ledcalculator-webfont.woff2') format('woff2'),
+    url('../fonts/ledcalculator-webfont.woff') format('woff'),
+    url('../fonts/LEDCalculator.ttf') format('TrueType Font');
+    font-weight: normal;
+    font-style: normal;*/
+    font-family: 'DS-Digital';
+    src: url('../fonts/DS-Digital.woff2') format('woff2'),
+    url('../fonts/DS-Digital.woff') format('woff'),
+    url('../fonts/DS-Digital.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+@font-face {
+    font-family: 'TablefontRegular';
+    src: url('../fonts/TablefontRegular.eot');
+    src: url('../fonts/TablefontRegular.eot?#iefix') format('embedded-opentype'),
+    url('../fonts/TablefontRegular.svg#TablefontRegular') format('svg'),
+    url('../fonts/TablefontRegular.ttf') format('truetype'),
+    url('../fonts/TablefontRegular.woff') format('woff'),
+    url('../fonts/TablefontRegular.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}
+
+#FlightTimeTable-en{
+    font-family:DS-Digital !important;
+}
+#FlightTimeTable-ru thead{
+    font-family:TablefontRegular !important;
+    font-size: calc(1.2vw + 0.6em) !important;
+}
+#FlightTimeTable-ru tbody{
+    font-family:DS-Digital !important;
+}
+
+/*#FlightTimeTable > .row:not(:first-child), #FlightTimeTable >.row:not(:nth-child(2)){
+    font-family: led_calculatorregular;
+    text-align: center;
+    margin: 5px 10px;
+    border-collapse: separate;
+    border-spacing: 15px;
+    border-radius: 5px;
+    border-color:#66656b;
+    background: #080808;
+}
+#FlightTimeTable .row:first-child{
+    font-size: 0.9em;
+    background-color: inherit;
+    /*font-family: "Comic Sans MS";*/
+
+/*    color: #f3bf52;
+    border: none;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 1.3em;
+    text-align: center;
+    margin: 5px 10px -5px 10px;
+}
+
+#FlightTimeTable .row:nth-child(2){
+    font-size: 0.9em;
+    font-family: "Comic Sans MS";
+    background-color: inherit;
+    color: white;
+    border: none;
+    text-transform: lowercase;
+    text-align: center;
+    margin: 5px 10px -5px 10px;
+}
+
+#FlightTimeTable > .col{
+    border: none !important;
+    font-size: 1.2em;
+}
+#FlightTimeTable > .col > span{
+    background-image: url(../img/dotted.png);
+    background-size: 20px;
+    background-position: left top;
+}
+#FlightTimeTable > .row > .col:first-child{
+    color: white;
+    text-transform: uppercase;
+}
+#FlightTimeTable > .row > .col:nth-child(2){
+    color: #f3bf52;
+    text-transform: uppercase;
+}
+#FlightTimeTable > .row > .col:nth-child(3){
+    color: white;
+    text-transform: uppercase;
+}
+#FlightTimeTable > .row > .col:nth-child(4){
+    color: white;
+    text-transform: uppercase;
+}*/

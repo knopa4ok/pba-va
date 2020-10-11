@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200.465 283.465">
+    <g style="isolation: isolate;">
+        <g>
+            <circle cx="141.732" cy="141.732" r="141.732" fill="#d4edfa"/>
+            <g>
+                <g>
+                    <image width="385" height="385" transform="translate(173.644 64.383) scale(0.24)" opacity="0.75" style="mix-blend-mode: multiply;"/>
+                    <path d="M243.374,104.762a29.04,29.04,0,1,1-29.04-29.04,29.04,29.04,0,0,1,29.04,29.04" transform="translate(-0.148 0.031)" fill="#009fe3"/>
+                </g>
+                <g>
+                    <image width="385" height="385" transform="translate(101.164 64.383) scale(0.24)" opacity="0.75" style="mix-blend-mode: multiply;"/>
+                    <circle cx="141.584" cy="104.793" r="29.04" fill="#00b6ed"/>
+                </g>
+                <g>
+                    <image width="385" height="385" transform="translate(28.444 64.383) scale(0.24)" opacity="0.75" style="mix-blend-mode: multiply;"/>
+                    <circle cx="68.982" cy="104.793" r="29.04" fill="#83d0f5"/>
+                </g>
+                <g>
+                    <image width="385" height="385" transform="translate(28.444 138.303) scale(0.24)" opacity="0.75" style="mix-blend-mode: multiply;"/>
+                    <circle cx="68.982" cy="178.733" r="29.04" fill="#009fe3"/>
+                </g>
+                <g>
+                    <image width="385" height="385" transform="translate(101.164 138.303) scale(0.24)" opacity="0.75" style="mix-blend-mode: multiply;"/>
+                    <circle cx="141.584" cy="178.733" r="29.04" fill="#00b6ed"/>
+                </g>
+                <g>
+                    <image width="385" height="385" transform="translate(173.644 138.303) scale(0.24)" opacity="0.75" style="mix-blend-mode: multiply;"/>
+                    <path d="M243.374,178.7a29.04,29.04,0,1,1-29.04-29.039,29.04,29.04,0,0,1,29.04,29.039" transform="translate(-0.148 0.031)" fill="#83d0f5">               
+                    </path>
+                </g>
+            </g>
+        </g>
+    </g>
+  <text x="300" y="200" fill="#009fe3" style="font-size: 150px; font-family: comic sans MS, sans -serif">VA POBEDA</text>
+  Sorry, your browser does not support inline SVG.
+</svg>

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DataSourceManagerImpl" format="xml" multifile-model="true">
+    <data-source source="LOCAL" name="MariaDB - u1103749_default@31.31.198.173" uuid="7a6e356c-c95d-41b4-ac0c-2fe215f7eb67">
+      <driver-ref>mariadb</driver-ref>
+      <synchronize>true</synchronize>
+      <jdbc-driver>org.mariadb.jdbc.Driver</jdbc-driver>
+      <jdbc-url>jdbc:mariadb://31.31.198.173:3306/u1103749_default</jdbc-url>
+    </data-source>
+  </component>
+</project>
