@@ -3,10 +3,6 @@
   "version": "1.1.0",
   "description": "",
   "main": "index.js",
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/creativetimofficial/argon-dashboard-react.git"
-  },
   "keywords": [
     "react",
     "reactjs",
@@ -19,9 +15,6 @@
   ],
   "author": "Konstantin M. Creative Tim",
   "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/creativetimofficial/argon-dashboard-react/issues"
-  },
   "homepage": "",
   "scripts": {
     "start": "react-scripts start",
