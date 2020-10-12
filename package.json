@@ -11,7 +11,6 @@
   ],
   "author": "Konstantin M. Creative Tim",
   "license": "MIT",
-  "homepage": "http://{Github-username}.github.io/{Github-repo-name}",
   "scripts": {
     "start": "react-scripts start",
     "predeploy": "npm run build",
