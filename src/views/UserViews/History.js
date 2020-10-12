@@ -42,8 +42,7 @@ export default function History({...props}){
             <Table className={'table-hover table-responsive-sm'}>
               <thead>
               <tr className=''>
-                {/*<th scope='col' style={{fontSize: `1.2em`}}>
-                  {localStorage.getItem('language') == 'ru'? 'Тип' : 'Type'}</th>*/}
+                <th scope='col' style={{fontSize: `1.2em`}}>VID</th>
                 <th scope='col' style={{fontSize: `1.2em`}}>
                   {localStorage.getItem('language') == 'ru'? 'Позывной' : 'Callsign'}</th>
                 <th scope='col' style={{fontSize: `1.2em`}}>
@@ -64,6 +63,7 @@ export default function History({...props}){
                     if(prop.ended = 0)return;
                   return (
                     <tr key={shortid()} id={prop.id} onClick={openValidation}>
+                      <td>{prop.pilot}</td>
                       <td>{prop.callsign}</td>
                       <td>{prop.fleet}</td>
                       <td>{prop.dep_icao} - {prop.arr_icao}</td>
