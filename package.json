@@ -14,7 +14,7 @@
   "homepage": "http://pbd-va.ru",
   "scripts": {
     "start": "react-scripts start",
-    "predeploy": "npm run build"
+    "predeploy": "npm run build",
     "build": "react-scripts build && rimraf build/**/*.map",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
