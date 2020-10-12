@@ -108,7 +108,6 @@ export default function HomeLayout({ ...props }){
                 user={user} 
                 pilot={pilot}
                 props={{...props}} 
-                logOut={logOut}
               />}
           />
         )
@@ -132,6 +131,7 @@ export default function HomeLayout({ ...props }){
                     pilot={pilot}
                     brandText={getBrandText(...props.location.pathname)}
                     languageSwitcher={languageSwitch}
+                    logOut={logOut}
                 />
                 <Switch>
                     {(user || !localStorage.getItem('IVAOTOKEN'))? getRoutes() : null}
