@@ -49,7 +49,6 @@ export default function HomePage({ ...props }){
 
   return (
       <>
-        {<Header />}
         {/* Page content */}
         <Container className="mt--7" fluid>
           <Card className="p-3">

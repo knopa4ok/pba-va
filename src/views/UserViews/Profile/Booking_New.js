@@ -129,61 +129,70 @@ export default function BookingNew({...props}){
     return ret;
   };
 
-  const handle_va_route = (e) =>{
+  const handle_va_route = (e) => {
     set_va_route(1);
     set_va_charter(0);
     set_ac_type({value: 240, label: 'B738'});
     set_arr_icao(null);
-    if(ident.indexOf('PBD') == 0)set_ident("");
+    if (ident.indexOf('PBD') == 0) set_ident("");
     getAllFleet();
-  }
-  const handle_va_charter =(e) =>{
+  };
+  const handle_va_charter = (e) => {
     set_va_route(0);
     set_va_charter(1);
     set_ac_reg(null);
     set_ident(props.pilot.callsign);
     getAllFleet();
-  }
-  const handle_ac_type = (e) =>{
-    if(e.keyCode && e.keyCode != 13) return;
-    if(e.label != 'B738') handle_va_charter();
+  };
+  const handle_ac_type = (e) => {
+    if (e.keyCode && e.keyCode != 13) return;
+    if (e.label != 'B738') handle_va_charter();
     set_ac_type(e);
-  }
-  const handle_ac_reg = (e) =>{
-    if(e.keyCode && e.keyCode != 13) return;
+  };
+  const handle_ac_reg = (e) => {
+    if (e.keyCode && e.keyCode != 13) return;
     set_ac_reg(e);
-  }
-  const handle_ident = (e) =>{
+  };
+  const handle_ident = (e) => {
     set_ident(e.target.value)
-  }
-  const loadIcaoOptions = (inputValue, callback) =>{
-    if(!airports) return;
-     callback(airports.airports.filter(i => i.icao.includes(inputValue.toUpperCase())));
-  }
-  const handle_dep_icao = (newValue, actionMeta) =>{
-    if(newValue.keyCode && newValue.keyCode != 13) return;
+  };
+  const loadIcaoOptions = (inputValue, callback) => {
+    if (!airports) return;
+    callback(airports.airports.filter(i => i.icao.includes(inputValue.toUpperCase())));
+  };
+  const handle_dep_icao = (newValue, actionMeta) => {
+    if (newValue.keyCode && newValue.keyCode != 13) return;
     set_dep_icao(newValue);
     return newValue;
-  }
-  const handle_arr_icao = (newValue, actionMeta) =>{
-    if(newValue.keyCode && newValue.keyCode != 13) return;
+  };
+  const handle_arr_icao = (newValue, actionMeta) => {
+    if (newValue.keyCode && newValue.keyCode != 13) return;
     set_arr_icao(newValue);
     return newValue;
-  }
+  };
 
   const handleSubmit = (e) => {
     e.preventDefault();
     var error = false;
-    if(!ac_type){alert(localStorage.getItem('language') == 'ru'? 'Проверьте тип ВС': 'Check AC type');error = true;}
-    if(!dep_icao){alert(localStorage.getItem('language') == 'ru'? 'Проверьте ICAO вылета': 'Check departure ICAO');error = true;}
-    if(!arr_icao){alert(localStorage.getItem('language') == 'ru'? 'Проверьте ICAO прилета': 'Check arrival ICAO');error = true;}
+    if (!ac_type) {
+      alert(localStorage.getItem('language') == 'ru' ? 'Проверьте тип ВС' : 'Check AC type');
+      error = true;
+    }
+    if (!dep_icao) {
+      alert(localStorage.getItem('language') == 'ru' ? 'Проверьте ICAO вылета' : 'Check departure ICAO');
+      error = true;
+    }
+    if (!arr_icao) {
+      alert(localStorage.getItem('language') == 'ru' ? 'Проверьте ICAO прилета' : 'Check arrival ICAO');
+      error = true;
+    }
 
-    if(!error){
+    if (!error) {
       var data = {
         'va_route': va_route,
         'va_charter': va_charter,
         'ac_type': ac_type.value,
-        'ac_reg': (ac_reg)? ac_reg.value : '',
+        'ac_reg': (ac_reg) ? ac_reg.value : '',
         'ident': ident,
         'dep_icao': dep_icao.icao,
         'arr_icao': arr_icao.icao

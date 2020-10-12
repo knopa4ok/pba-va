@@ -8,14 +8,19 @@ export default function History({...props}){
   const [flights, setFlights] = useState(null);
   useEffect(() =>{getFlights()},[]);
   const getFlights = () => {
-    fetch( API_URL+"/flight", {
+    fetch(API_URL + "/flight", {
       method: 'GET',
       headers: {
         'Content-Type': 'application/json',
-        'Authorization': 'Bearer '+localStorage.getItem('IVAOTOKEN'),
-      }})
-      .then(res =>res.json())
-      .then((response => {setFlights(response.reverse())}));
+        'Authorization': 'Bearer ' + localStorage.getItem('IVAOTOKEN'),
+      }
+    })
+      .then(res => res.json())
+      .then((result => {
+        if (result) {
+          setFlights(result.reverse())
+        }
+      }))
   };
   const openValidation = (e) =>{
     e.preventDefault();
@@ -25,7 +30,6 @@ export default function History({...props}){
   }
   return (
     <>
-    <Header />
     {/* Page content */}
       <Container className="mt--7" fluid>
         <Card className="p-3">
@@ -39,20 +43,20 @@ export default function History({...props}){
             </CardTitle>
           </CardHeader>
           <CardBody>
-            <Table className={'table-hover table-responsive-sm'}>
+            <Table className={'table-hover table-responsive-md'}>
               <thead>
               <tr className=''>
                 <th scope='col' style={{fontSize: `1.2em`}}>VID</th>
                 <th scope='col' style={{fontSize: `1.2em`}}>
-                  {localStorage.getItem('language') == 'ru'? 'Позывной' : 'Callsign'}</th>
+                  {localStorage.getItem('language') == 'ru' ? 'Позывной' : 'Callsign'}</th>
                 <th scope='col' style={{fontSize: `1.2em`}}>
-                  {localStorage.getItem('language') == 'ru'? 'Тип ВС' : 'AC type'}</th>
+                  {localStorage.getItem('language') == 'ru' ? 'Тип ВС' : 'AC type'}</th>
                 <th scope='col' style={{fontSize: `1.2em`}}>
-                  {localStorage.getItem('language') == 'ru'? 'Маршрут' : 'Route'}</th>
+                  {localStorage.getItem('language') == 'ru' ? 'Маршрут' : 'Route'}</th>
                 <th scope='col' style={{fontSize: `1.2em`}}>
-                  {localStorage.getItem('language') == 'ru'? 'Длительность' : 'Duration'}</th>
+                  {localStorage.getItem('language') == 'ru' ? 'Длительность' : 'Duration'}</th>
                 <th scope='col' style={{fontSize: `1.2em`}}>
-                  {localStorage.getItem('language') == 'ru'? 'Статус' : 'Status'}</th>
+                  {localStorage.getItem('language') == 'ru' ? 'Статус' : 'Status'}</th>
               </tr>
               </thead>
               <tbody>
@@ -63,7 +67,7 @@ export default function History({...props}){
                     if(prop.ended = 0)return;
                   return (
                     <tr key={shortid()} id={prop.id} onClick={openValidation}>
-                      <td>{prop.pilot}</td>
+                      <td>{prop.vid}</td>
                       <td>{prop.callsign}</td>
                       <td>{prop.fleet}</td>
                       <td>{prop.dep_icao} - {prop.arr_icao}</td>

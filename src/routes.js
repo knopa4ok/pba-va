@@ -5,7 +5,6 @@ import Staff from "views/UserViews/Staff";
 import Pilots from "views/UserViews/Pilots";
 import Routes from "views/UserViews/Routes";
 import History from "views/UserViews/History";
-import Register from "views/UserViews/Register";
 import Profile from "views/UserViews/Profile";
 import Vacancies from "views/UserViews/Vacancies";
 

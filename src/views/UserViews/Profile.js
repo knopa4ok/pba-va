@@ -46,7 +46,6 @@ export default function Profile({...props}){
   };
   return (
     <>
-      <Header />
         {/* Page content */}
       <Container className="mt--7" fluid>
         <Row>

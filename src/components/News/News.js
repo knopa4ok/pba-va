@@ -13,10 +13,17 @@ import {API_URL} from "../../CONSTANTS";
 export default function News({...props}){
 
   //Get news only on initial render
-  const [news, setNews] = useState(()=>{getNews()});
+  const [news, setNews] = useState(null);
   const newsCountOnMain = 3;
-  
-  const getNews = () =>{
+
+  useEffect(() => {
+    if (news || props.inLoading) return;
+    props.loading(true);
+    // console.log('useEffect - getNews();')
+    getNews();
+  }, []);
+
+  const getNews = () => {
     fetch(API_URL + "/news", {
       method: 'GET',
       headers: {
@@ -27,7 +34,10 @@ export default function News({...props}){
       .then(res => res.json())
       .then((result) => {
         if (result) {
+          //console.log('setNews');
           setNews(result);
+          props.loading(false);
+          //props.setNews(result);
         }
       })
   };

@@ -15,17 +15,20 @@ export default function Pilots({...props}){
 
   const[pilots, setPilots] = useState([]);
 
-  useEffect(() =>{
+  useEffect(() => {
     const options = {
       method: 'GET',
       headers: {
         'Content-Type': 'application/json',
-        'Authorization': 'Bearer '+localStorage.getItem('IVAOTOKEN'),
-      }};
-    fetch(API_URL +"/pilot",options)
-        .then(res =>res.json())
-        .then(json => {setPilots(json)})
-  },[])
+        'Authorization': 'Bearer ' + localStorage.getItem('IVAOTOKEN'),
+      }
+    };
+    fetch(API_URL + "/pilot", options)
+      .then(res => res.json())
+      .then(json => {
+        setPilots(json)
+      })
+  }, []);
 
   const openPilotProfile = (e) =>{
     e.preventDefault();
@@ -39,10 +42,10 @@ export default function Pilots({...props}){
             <tr key={shortid()} id={prop.vid} onClick={openPilotProfile} style={{cursor: 'pointer'}}>
               <td>{prop.vid}</td>
               {
-                (props.user.vid)?
+                (props.user.vid) ?
                   (
                     <td>{prop.fullusername}</td>
-                  ): ''
+                  ) : null
 
               }
               <td>{prop.callsign}</td>
@@ -53,7 +56,6 @@ export default function Pilots({...props}){
 
   return (
       <>
-        <Header />
         {/* Page content */}
 
         <Container className="mt--7" fluid>

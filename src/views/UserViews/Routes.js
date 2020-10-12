@@ -1,9 +1,8 @@
 import React,{useState, useEffect} from "react";
 import {Card, CardHeader, CardBody, Container, Table} from "reactstrap";
 
-import Header from "../../components/Headers/Header";
 import {API_URL} from "../../CONSTANTS";
-import {Map as LeafletMap, Marker, Polyline, Popup, TileLayer, GeoJSON} from "react-leaflet";
+import {Map as LeafletMap, Marker, Polyline, Popup, TileLayer} from "react-leaflet";
 import shortid from "shortid";
 import L from "leaflet";
 import PageLoading from "../PageLoading";
@@ -100,7 +99,6 @@ export default function Routes({...props}){
   if(!routes)return <PageLoading />;
   return (
     <>
-      {<Header />}
       {/* Page content */}
       <Container className="mt--7" fluid>
         <Card className="p-3">

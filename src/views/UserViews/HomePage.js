@@ -1,4 +1,4 @@
-import React, {useState, useEffect} from "react";
+import React, {useState, useEffect, useRef} from "react";
 // reactstrap components
 import {
     Card,
@@ -21,12 +21,20 @@ import ReactHtmlParser from "react-html-parser";
 import draftToHtml from "draftjs-to-html";
 import PageLoading from "../PageLoading";
 
-export default function HomePage({...props}){
+export default function HomePage({...props}) {
 
   const [weAre, setWeAre] = useState(null);
-  useEffect(()=>{getWhoWeAre()},[]);
+  const [loaded, setLoaded] = useState(true);
+  const loading = useRef(false);
+  useEffect(() => {
+    loading.current = false
+  }, [loaded]);
+  useEffect(() => {
+    if (weAre) return;
+    getWhoWeAre()
+  }, []);
 
-  const getWhoWeAre = () =>{
+  const getWhoWeAre = () => {
     var options = {
       method: "GET",
       headers: {
@@ -34,20 +42,22 @@ export default function HomePage({...props}){
         'Authorization': 'Bearer ' + localStorage.getItem('IVAOTOKEN'),
       }
     };
-    fetch(API_URL + "/articles/0", options, {
-    })
+    fetch(API_URL + "/articles/0", options, {})
       .then(res => res.json())
       .then((result) => {
-        setWeAre(result);
+        if (result) {
+          //setContext({...context, whoweare: result});
+          setWeAre(result);
+        }
+
       });
   };
+
 
   if(props.user.vid && props.pilot && props.pilot.length == 0)return <PageLoading/>;
     return (
         <>
-            <Header key={shortid()} {...props}/>
             {/* Page content */}
-
             <Container className="mt--7" fluid>
                     <Card>
                         <Row>
@@ -72,13 +82,22 @@ export default function HomePage({...props}){
                                   {/*localStorage.getItem("language") == "ru"
                                         ? "Виртуальная авиакомпания \"Победа\" - это группа авиационных энтузиастов. Мы стремимся обеспечить дополненный виртуальный авиационный опыт, создавая виртуальную авиационную среду для всех. Мы являемся некоммерческой организацией, сотрудничающей с International Virtual Aviation Network (IVAO)."
                                         : "Pobeda Virtual Airlines is a group of aviation enthusiasts. We aim to provide an augmented virtual aviation experience by creating a virtual airline environment for everyone. We are a non-commercial organisation partnering with the International Virtual Aviation Network (IVAO)."
-                                   */ }</CardBody>
+                                   */}</CardBody>
                             </Col>
-                    </Row>
+                        </Row>
                     </Card>
-                    <News />
-                    <TimeTable />
-
+              <News loading={(f) => {
+                loading.current = f;
+                if (!f) {
+                  setLoaded(f);
+                }
+              }} inLoading={loading.current}/>
+              <TimeTable loading={(f) => {
+                loading.current = f;
+                if (!f) {
+                  setLoaded(f);
+                }
+              }} inLoading={loading.current}/>
             </Container>
         </>
     );

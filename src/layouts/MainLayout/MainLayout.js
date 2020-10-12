@@ -6,36 +6,54 @@
 import React, {useEffect, useState} from "react";
 import {matchPath, Route, Switch} from "react-router-dom";
 // reactstrap components
-import { Container, Button, Modal} from "reactstrap";
+import {Container, Button, Modal} from "reactstrap";
 // core components
+import Header from "../../components/Headers/Header";
 import UserNavbar from "components/Navbars/UserNavbar.js";
 import UserFooter from "components/Footers/UserFooter.js";
 import Sidebar from "components/Sidebar/Sidebar.js";
-
 import routes from "routes.js";
-import {API_URL,hist} from "../../CONSTANTS";
+import {API_URL, hist} from "../../CONSTANTS";
+import PageLoading from "../../views/PageLoading";
 
-export default function HomeLayout({ ...props }){
+export default function HomeLayout({...props}) {
   document.documentElement.scrollTop = 0;
   document.scrollingElement.scrollTop = 0;
 
-  const ref = React.createRef();
-  const [language, setLanguage] = useState(()=>{if(!localStorage.getItem('language')){localStorage.setItem('language','en');}return localStorage.getItem('language')});
-  const [user, setUser] = useState(() =>{getUserInfo()});
+  const [language, setLanguage] = useState(() => {
+    if (!localStorage.getItem('language')) {
+      localStorage.setItem('language', 'en');
+    }
+    return localStorage.getItem('language')
+  });
+  const [user, setUser] = useState([]);
   const [pilot, setPilot] = useState([]);
 
-  const match = () => {return matchPath(hist.location.pathname, {path: '*/:layout/:id', exact: false, strict: false})};
+  const match = () => {
+    return matchPath(hist.location.pathname, {path: '*/:layout/:id', exact: false, strict: false})
+  };
 
-  useEffect(()=>{
-    if(!user.vid)return;
-    if(match() && !isNaN(match().params.id) && match().params[0] == '/profile' && match().params.layout == 'info'){getPilotInfo(match().params.id)}
-    else{getPilotInfo();}
-  },[user]);
+  useEffect(() => {
+    console.log('useEffect - getUserInfo()');
+    getUserInfo();
+  }, []);
 
-  const languageSwitch = () =>{
+  useEffect(() => {
+    if (!user.vid) return;
+    if (match() && !isNaN(match().params.id) && match().params[0] == '/profile' && match().params.layout == 'info') {
+      getPilotInfo(match().params.id)
+    } else {
+      getPilotInfo();
+    }
+  }, [user]);
+
+  const languageSwitch = () => {
     var lang;
-    if(!language || language == 'ru'){lang = 'en'}
-    else{lang = 'ru'}
+    if (!language || language == 'ru') {
+      lang = 'en'
+    } else {
+      lang = 'ru'
+    }
     setLanguage(lang);
     localStorage.setItem('language', lang);
   };
@@ -50,9 +68,11 @@ export default function HomeLayout({ ...props }){
       }
     })
       .then(res => res.json())
-      .then(result =>{
-        if (result && result.vid) setUser(result);
-        else {
+      .then(result => {
+        if (result && result.vid) {
+          result.loaded = 1;
+          setUser(result);
+        } else {
           localStorage.removeItem('IVAOTOKEN');
           return false;
         }
@@ -85,50 +105,53 @@ export default function HomeLayout({ ...props }){
     }
     return "";
   };
-  
-  const logOut = () =>{
-   localStorage.clear();
-    setUser(null);
-  }
 
-  const getRoutes = () =>{
+  const logOut = () => {
+    localStorage.clear();
+    setUser(null);
+  };
+
+  const getRoutes = () => {
     return routes.map((prop, key) => {
-        return (
-          <Route
-            key={key}
-            path={prop.layout + prop.path}
-            component={() => <prop.component language={language} user={user} props={{...props}} pilot={pilot}/>}
-          />
-        )
-    })};
-    return (
-        <>
-            <Sidebar
-                {...props}
-                user={user}
-                routes={routes}
-                logo={{
-                    innerLink: "/",
-                    imgSrc: require("logo.svg"),
-                    imgAlt: "..."
-                }}
-            />
-            <div className="main-content" ref={ref}>
-                <UserNavbar
-                    {...props}
-                    user={user}
-                    pilot={pilot}
-                    brandText={getBrandText(...props.location.pathname)}
-                    languageSwitcher={languageSwitch}
-                    logOut={logOut}
-                />
-                <Switch>
-                    {(user || !localStorage.getItem('IVAOTOKEN'))? getRoutes() : null}
-                </Switch>
-                <Container fluid>
-                    <UserFooter />
-                </Container>
-            </div>
-        </>
-    );
+      return (
+        <Route
+          key={key}
+          path={prop.layout + prop.path}
+          component={() => <prop.component language={language} user={user} props={{...props}} pilot={pilot}/>}
+        />
+      )
+    })
+  };
+
+  return (
+    <>
+      <Sidebar
+        {...props}
+        user={user}
+        routes={routes}
+        logo={{
+          innerLink: "/",
+          imgSrc: require("logo.svg"),
+          imgAlt: "..."
+        }}
+      />
+      <div className="main-content">
+        <UserNavbar
+          {...props}
+          user={user}
+          pilot={pilot}
+          brandText={getBrandText(...props.location.pathname)}
+          languageSwitcher={languageSwitch}
+          logOut={logOut}
+        />
+        <Header/>
+        <Switch>
+          {(user || !localStorage.getItem('IVAOTOKEN')) ? getRoutes() : null}
+        </Switch>
+        <Container fluid>
+          <UserFooter/>
+        </Container>
+      </div>
+    </>
+  );
 }

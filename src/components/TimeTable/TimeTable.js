@@ -6,28 +6,32 @@ import {
 } from "reactstrap";
 import PageLoading from "../../views/PageLoading";
 
-
-export default function TimeTable() {
-
+export default function TimeTable({...props}) {
   const [flights, setFlights] = useState(null);
-  useEffect(()=>{
-    if(flights)return;
-    getFlights()
-  },[flights]);
+  useEffect(() => {
+    if (!flights && !props.inLoading) {
+      props.loading(true);
+      getFlights();
+    }
+  }, []);
 
   const getFlights = () => {
-    fetch(API_URL+"/flight/timetable", {
-    method: 'GET',
-    headers: {
-      'Content-Type': 'application/json',
-      'Authorization': 'Bearer '+localStorage.getItem('IVAOTOKEN'),
-    },
+    fetch(API_URL + "/flight/timetable", {
+      method: 'GET',
+      headers: {
+        'Content-Type': 'application/json',
+        'Authorization': 'Bearer ' + localStorage.getItem('IVAOTOKEN'),
+      },
     })
       .then(res => res.json())
-     .then(response =>{
-       if(response)setFlights(response);
-     })
-    };
+      .then(result => {
+        if (result) {
+          setFlights(result);
+          //console.log('setFlights');
+          props.loading(false);
+        }
+      })
+  };
 
   const switchStatus = (prop) => {
     switch(prop['status']){
