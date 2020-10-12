@@ -63,6 +63,11 @@ export default function HomeLayout({ ...props }){
         }
       });
   };
+  
+  const logOut = () =>{
+    localStorage.clear();
+    setUser(null);
+  }
 
   const getPilotInfo= (vid) =>{
     vid = (vid)? vid : user.vid;
@@ -97,7 +102,14 @@ export default function HomeLayout({ ...props }){
           <Route
             key={key}
             path={prop.layout + prop.path}
-            component={() => <prop.component language={language} user={user} props={{...props}} pilot={pilot}/>}
+            component={() => 
+              <prop.component 
+                language={language} 
+                user={user} 
+                pilot={pilot}
+                props={{...props}} 
+                logOut={logOut}
+              />}
           />
         )
     })};
