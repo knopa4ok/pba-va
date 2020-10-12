@@ -47,7 +47,7 @@ ReactDOM.render(
     <Switch>
       <Route path="/admin/:view" component={AdminLayout} />
       <Route path="/admin/:view/:id" component={AdminLayout} />
-      <Route path="/home" component={MainLayout} />
+      <Route path="/home" exact component={MainLayout} />
       <Route path="/rules" component={MainLayout} />
       <Route path="/staff" component={MainLayout} />
       <Route path="/fleet" component={MainLayout} />
@@ -58,9 +58,6 @@ ReactDOM.render(
       <Route path="/cv" component={MainLayout} />
       <Route path="/login" component={Login(hist)} />
       <Route path="/profile/" component={MainLayout} />
-      <Route path="/">
-          <Redirect to="/home"  component={MainLayout} ></Redirect>
-      </Route>
 
     </Switch>
   </BrowserRouter>,
