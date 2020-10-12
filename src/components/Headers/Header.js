@@ -1,19 +1,7 @@
 /*!
 
-=========================================================
-* Argon Dashboard React - v1.1.0
-=========================================================
-
-* Product Page: https://www.creative-tim.com/product/argon-dashboard-react
-* Copyright 2019 Creative Tim (https://www.creative-tim.com)
-* Licensed under MIT (https://github.com/creativetimofficial/argon-dashboard-react/blob/master/LICENSE.md)
-
-* Coded by Creative Tim
-
-=========================================================
-
-* The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
-
+Author: Konstantin Malinovski
+email: malinovski.konstantin@gmail.com
 */
 import React, {useEffect, useState} from "react";
 import shortid from 'shortid';
@@ -23,13 +11,7 @@ import { Card, CardBody, CardTitle, Container, Row, Col } from "reactstrap";
 import routes from "../../routes";
 
 export default function Header({ ...props }){
-  const [statistics, setStatistics] = useState('');
-
-  /* Start once */
-  useEffect(() =>{
-    if(statistics)return;
-    getStatistics();
-  },[]);
+  const [statistics, setStatistics] = useState(() =>{getStatistics()});
 
   const getStatistics = () =>{
     const options = {
