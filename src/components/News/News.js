@@ -12,13 +12,10 @@ import {API_URL} from "../../CONSTANTS";
 
 export default function News({...props}){
 
-  const [news, setNews] = useState(null);
+  //Get news only on initial render
+  const [news, setNews] = useState(()=>{getNews()});
   const newsCountOnMain = 3;
-
-  useEffect( () =>{
-     getNews();
-  },[]);
-
+  
   const getNews = () =>{
     fetch(API_URL + "/news", {
       method: 'GET',
