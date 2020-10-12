@@ -11,9 +11,10 @@
   ],
   "author": "Konstantin M. Creative Tim",
   "license": "MIT",
-  "homepage": "",
+  "homepage": "http://pbd-va.ru",
   "scripts": {
     "start": "react-scripts start",
+    "predeploy": "npm run build"
     "build": "react-scripts build && rimraf build/**/*.map",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
