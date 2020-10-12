@@ -15,6 +15,7 @@
   "scripts": {
     "start": "react-scripts start",
     "predeploy": "npm run build",
+    //"build": "gh-pages -d build",
     "build": "react-scripts build && rimraf build/**/*.map",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
