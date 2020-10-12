@@ -64,12 +64,6 @@ export default function UserNavbar({ ...props }){
     props.languageSwitcher();
   }
 
-  function logOut(e) {
-    e.preventDefault();
-    localStorage.clear();
-    window.location.reload();
-  }
-
   const userTopNavbar = (
       <UncontrolledDropdown nav inNavbar className={"d-sm-inline"}>
           <DropdownToggle nav  className="dropdown pr-0">
@@ -109,7 +103,7 @@ export default function UserNavbar({ ...props }){
                   </DropdownItem>
                 : null}
             <DropdownItem divider />
-                  <DropdownItem onClick={logOut}>
+                  <DropdownItem onClick={props.logOut}>
                     <i className="ni ni-user-run" />
                     <span>
                       {localStorage.getItem("language") === "ru"
