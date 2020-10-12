@@ -20,16 +20,11 @@ export default function HomeLayout({ ...props }){
   document.scrollingElement.scrollTop = 0;
 
   const ref = React.createRef();
-  const [language, setLanguage] = useState(localStorage.getItem('language'));
-  const [user, setUser] = useState({});
+  const [language, setLanguage] = useState({localStorage.getItem('language') || 'en'});
+  const [user, setUser] = useState(() =>{getUserInfo()});
   const [pilot, setPilot] = useState([]);
 
   const match = () => {return matchPath(hist.location.pathname, {path: '*/:layout/:id', exact: false, strict: false})};
-
-  useEffect(()=>{
-    getUserInfo();
-    if(!language){setLanguage('en')}
-  },[]);
 
   useEffect(()=>{
     if(!user.vid)return;
