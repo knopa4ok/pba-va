@@ -20,7 +20,7 @@ export default function HomeLayout({ ...props }){
   document.scrollingElement.scrollTop = 0;
 
   const ref = React.createRef();
-  const [language, setLanguage] = useState({localStorage.getItem('language') || 'en'});
+  const [language, setLanguage] = useState(()=>{(var language = localStorage.getItem('language')? language || 'en'});
   const [user, setUser] = useState(() =>{getUserInfo()});
   const [pilot, setPilot] = useState([]);
 
