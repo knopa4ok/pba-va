@@ -85,6 +85,11 @@ export default function HomeLayout({ ...props }){
     }
     return "";
   };
+  
+  const logOut = () =>{
+   localStorage.clear();
+    setUser(null);
+  }
 
   const getRoutes = () =>{
     return routes.map((prop, key) => {
@@ -115,6 +120,7 @@ export default function HomeLayout({ ...props }){
                     pilot={pilot}
                     brandText={getBrandText(...props.location.pathname)}
                     languageSwitcher={languageSwitch}
+                    logOut={logOut}
                 />
                 <Switch>
                     {(user || !localStorage.getItem('IVAOTOKEN'))? getRoutes() : null}
