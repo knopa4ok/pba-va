@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 import React, {useState, useEffect, useRef, useCallback} from "react";
+=======
+import React, {useState, useEffect, useRef} from "react";
+>>>>>>> parent of d284f49... Update HomePage.js
 // reactstrap components
 import {
     Card,
@@ -34,7 +38,11 @@ export default function HomePage({...props}) {
     getWhoWeAre()
   }, []);
 
+<<<<<<< HEAD
   const getWhoWeAre = useCallback(() => {
+=======
+  const getWhoWeAre = () => {
+>>>>>>> parent of d284f49... Update HomePage.js
     var options = {
       method: "GET",
       headers: {
@@ -51,7 +59,7 @@ export default function HomePage({...props}) {
         }
 
       });
-  },[weAre]);
+  };
 
 
   if(props.user.vid && props.pilot && props.pilot.length == 0)return <PageLoading/>;
