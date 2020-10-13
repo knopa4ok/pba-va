@@ -1,4 +1,4 @@
-import React, {useState, useEffect, useRef, useMemo} from "react";
+import React, {useState, useEffect, useRef, useCallback} from "react";
 // reactstrap components
 import {
     Card,
@@ -34,7 +34,7 @@ export default function HomePage({...props}) {
     getWhoWeAre()
   }, []);
 
-  const getWhoWeAre = useMemo(() => {
+  const getWhoWeAre = useCallback(() => {
     var options = {
       method: "GET",
       headers: {
