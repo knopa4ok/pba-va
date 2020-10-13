@@ -3,7 +3,7 @@
 Author: Konstantin Malinovski
 email: malinovski.konstantin@gmail.com
 */
-import React, {useEffect, useState, useRef} from "react";
+import React, {useEffect, useState, useMemo} from "react";
 import shortid from 'shortid';
 import {API_URL} from "../../CONSTANTS";
 // reactstrap components
@@ -12,16 +12,11 @@ import routes from "../../routes";
 
 export default function Header({...props}) {
   const [statistics, setStatistics] = useState([]);
-  const loading = useRef(false);
   useEffect(() => {
-    if (statistics.length == 0 && !loading.current) {
-      loading.current = true;
-      //console.log('useEffect - getStatistics');
       getStatistics();
-    }
   }, []);
 
-  const getStatistics = () => {
+  const getStatistics = useMemo(() => {
     const options = {
       method: 'GET',
       headers: {
@@ -39,7 +34,8 @@ export default function Header({...props}) {
         }),
         (error) => {
         });
-  };
+  },[statistics]);
+                                
   const statsBlocks = () => {
     return routes.map((prop, key) => {
       if (
