@@ -30,7 +30,7 @@ export default function HomePage({...props}) {
   const reducer = (state, action){
    switch(action.type){
     case: 'setWeAre':
-       state.weAre = action.payload;
+       return (...state, {weAre: action.payload});
        break;
      default:
        return state;
