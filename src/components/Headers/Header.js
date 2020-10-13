@@ -42,7 +42,6 @@ export default function Header({...props}) {
         prop.path + prop.layout == window.location.pathname &&
         prop.statBar == 1
       ) {
-        if (!statistics) getStatistics();
         return true;
         return (
           <Row key={shortid()}>
