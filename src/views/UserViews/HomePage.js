@@ -1,4 +1,4 @@
-import React, {useState, useEffect, useRef} from "react";
+import React, {useState, useEffect, useRef, useMemo} from "react";
 // reactstrap components
 import {
     Card,
@@ -34,7 +34,7 @@ export default function HomePage({...props}) {
     getWhoWeAre()
   }, []);
 
-  const getWhoWeAre = () => {
+  const getWhoWeAre = useMemo(() => {
     var options = {
       method: "GET",
       headers: {
@@ -51,7 +51,7 @@ export default function HomePage({...props}) {
         }
 
       });
-  };
+  },[weAre]);
 
 
   if(props.user.vid && props.pilot && props.pilot.length == 0)return <PageLoading/>;
