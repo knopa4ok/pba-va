@@ -3,7 +3,7 @@
 * Malinovski Konstantin
 * konstantin@malinovski.tk
 */
-import React, {useEffect, useState} from "react";
+import React, {useEffect, useState, useMemo} from "react";
 import {matchPath, Route, Switch} from "react-router-dom";
 // reactstrap components
 import {Container, Button, Modal} from "reactstrap";
@@ -58,7 +58,7 @@ export default function HomeLayout({...props}) {
     localStorage.setItem('language', lang);
   };
 
-  const getUserInfo = ()=> {
+  const getUserInfo = useMemo(()=> {
     if(!localStorage.getItem('IVAOTOKEN')) return;
     fetch(API_URL + "/user", {
       method: 'POST',
@@ -77,7 +77,7 @@ export default function HomeLayout({...props}) {
           return false;
         }
       });
-  };
+  },[user]);
 
   const getPilotInfo= (vid) =>{
     vid = (vid)? vid : user.vid;
