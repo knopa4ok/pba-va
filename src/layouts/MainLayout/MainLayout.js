@@ -58,8 +58,8 @@ export default function HomeLayout({...props}) {
     localStorage.setItem('language', lang);
   };
 
-  const getUserInfo = useMemo(()=> {
-    if(!localStorage.getItem('IVAOTOKEN')) return;
+  const getUserInfo = () => {
+    if (!localStorage.getItem('IVAOTOKEN')) return;
     fetch(API_URL + "/user", {
       method: 'POST',
       headers: {
@@ -77,7 +77,7 @@ export default function HomeLayout({...props}) {
           return false;
         }
       });
-  },[user]);
+  };
 
   const getPilotInfo= (vid) =>{
     vid = (vid)? vid : user.vid;

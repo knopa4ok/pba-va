@@ -46,7 +46,7 @@ export default function AdminNavbar({...props}) {
           className="flex-column navbar-light bg-white"
           expand={'sm'}>
           <NavItem key={shortid()} className='p-2' style={{cursor: 'pointer'}}>
-            <NavLink style={{fontSize: '0.8vw'}} onClick={() => {
+            <NavLink style={{fontSize: 'calc(0.5vw + 0.4em)'}} onClick={() => {
               setModalContent('staff')
             }}>
               <i className="fa fa-users text-info fa-lg mr-3"/>
@@ -54,7 +54,7 @@ export default function AdminNavbar({...props}) {
             </NavLink>
           </NavItem>
           <NavItem key={shortid()} className='p-2' style={{cursor: 'pointer'}}>
-            <NavLink style={{fontSize: '0.8vw'}} onClick={() => {
+            <NavLink style={{fontSize: 'calc(0.5vw + 0.4em)'}} onClick={() => {
               setModalContent('location')
             }}>
               <i className="fa fa-globe fa-lg text-info mr-3"/>

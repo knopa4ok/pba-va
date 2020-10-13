@@ -3,7 +3,7 @@
 Author: Konstantin Malinovski
 email: malinovski.konstantin@gmail.com
 */
-import React, {useEffect, useState, useMemo} from "react";
+import React, {useEffect, useReducer} from "react";
 import shortid from 'shortid';
 import {API_URL} from "../../CONSTANTS";
 // reactstrap components
@@ -11,12 +11,25 @@ import { Card, CardBody, CardTitle, Container, Row, Col } from "reactstrap";
 import routes from "../../routes";
 
 export default function Header({...props}) {
-  const [statistics, setStatistics] = useState([]);
+  const [state, dispatch] = useReducer(reducer, {});
+
+  function reducer(state, action) {
+    switch (action.type) {
+      case 'setStatistics':
+        var s = state;
+        s.statistics = action.payload;
+        return s;
+        break;
+      default:
+        return state;
+    }
+  };
+
   useEffect(() => {
-      getStatistics();
+    getStatistics();
   }, []);
 
-  const getStatistics = useMemo(() => {
+  const getStatistics = () => {
     const options = {
       method: 'GET',
       headers: {
@@ -29,20 +42,20 @@ export default function Header({...props}) {
       .then(((result) => {
           if (result) {
             console.log('setStatistics');
-            setStatistics(result);
+            dispatch({type: 'setStatistics', payload: result})
           }
         }),
         (error) => {
         });
-  },[statistics]);
+  };
                                 
   const statsBlocks = () => {
+    if (!state.statistics) return;
     return routes.map((prop, key) => {
       if (
         prop.path + prop.layout == window.location.pathname &&
         prop.statBar == 1
       ) {
-        return true;
         return (
           <Row key={shortid()}>
             <Col lg="6" xl="3" key={shortid()}>
@@ -57,7 +70,7 @@ export default function Header({...props}) {
                         {localStorage.getItem("language") === "ru" ? "Активные пилоты:" : "Active pilots:"}
                       </CardTitle>
                       <span className="h2 font-weight-bold mb-0" key={shortid()}>
-                            {statistics.countPilots}
+                            {state.statistics.countPilots}
                           </span>
                     </div>
                     <Col className="col-auto" key={shortid()}>
@@ -66,12 +79,6 @@ export default function Header({...props}) {
                       </div>
                     </Col>
                   </Row>
-                  {/* <p className="mt-3 mb-0 text-muted text-sm">
-                        <span className="text-success mr-2">
-                          <i className="fa fa-arrow-up" /> 3.48%
-                        </span>{" "}
-                        <span className="text-nowrap">Since last month</span>
-                      </p>*/}
                 </CardBody>
               </Card>
             </Col>
@@ -87,7 +94,7 @@ export default function Header({...props}) {
                         {localStorage.getItem("language") === "ru" ? "Совершенных полётов:" : "Total flights:"}
                       </CardTitle>
                       <span className="h2 font-weight-bold mb-0" key={shortid()}>
-                            {statistics.countFlight}
+                            {state.statistics.countFlight}
                           </span>
                     </div>
                     <Col className="col-auto" key={shortid()}>
@@ -96,12 +103,6 @@ export default function Header({...props}) {
                       </div>
                     </Col>
                   </Row>
-                  {/* <p className="mt-3 mb-0 text-muted text-sm">
-                        <span className="text-success mr-2">
-                          <i className="fa fa-arrow-up" /> 3.48%
-                        </span>{" "}
-                        <span className="te xt-nowrap">Since last month</span>
-                      </p>*/}
                 </CardBody>
               </Card>
             </Col>
@@ -118,8 +119,8 @@ export default function Header({...props}) {
                         {localStorage.getItem("language") === "ru" ? "Налёт компании:" : "Total flights duration:"}
                       </CardTitle>
                       <span className="h2 font-weight-bold mb-0" key={shortid()}>
-                            {(statistics) ?
-                              localStorage.getItem('language') === "ru" ? statistics.hoursSum + " часов" : statistics.hoursSum + " hours" : ""}
+                            {(state.statistics) ?
+                              localStorage.getItem('language') === "ru" ? state.statistics.hoursSum + " часов" : state.statistics.hoursSum + " hours" : ""}
 
                           </span>
                     </div>
@@ -129,12 +130,6 @@ export default function Header({...props}) {
                       </div>
                     </Col>
                   </Row>
-                  {/* <p className="mt-3 mb-0 text-muted text-sm">
-                        <span className="text-success mr-2">
-                          <i className="fa fa-arrow-up" /> 3.48%
-                        </span>{" "}
-                        <span className="text-nowrap">Since last month</span>
-                      </p>*/}
                 </CardBody>
               </Card>
             </Col>
@@ -150,7 +145,7 @@ export default function Header({...props}) {
                         {localStorage.getItem("language") === "ru" ? "Забронированные полёты:" : "Booked flights:"}
                       </CardTitle>
                       <span className="h2 font-weight-bold mb-0" key={shortid()}>
-                            {statistics.countBooked}
+                            {state.statistics.countBooked}
                           </span>
                     </div>
                     <Col className="col-auto" key={shortid()}>

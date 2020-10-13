@@ -42,11 +42,14 @@ export default function BookingNew({...props}){
         'Authorization': 'Bearer '+localStorage.getItem('IVAOTOKEN'),
       }};
     let airport = (dep_icao && va_route)? '?icao='+dep_icao.icao : '';
-    fetch( API_URL+"/fleet/all"+airport, options)
+    fetch(API_URL + "/fleet/all" + airport, options)
       .then(res => res.json())
       .then((result) => {
-        if(aircrafts != result){ setAircrafts(result)}
-        });
+        if (aircrafts != result) {
+          setAircrafts(result);
+          set_ac_reg({label: result.aircrafts[0].code, value: result.aircrafts[0].id});
+        }
+      });
   };
   const getAirports = (silent) =>{
     const options = {

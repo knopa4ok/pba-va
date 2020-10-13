@@ -23,29 +23,30 @@ import PageLoading from "../PageLoading";
 
 export default function HomePage({...props}) {
 
-  const [state, dispatch] = useReducer(reducer, null);
+  const [state, dispatch] = useReducer(reducer, {});
   const [loaded, setLoaded] = useState(true);
   const loading = useRef(false);
-  
-  const reducer = (state, action){
-   switch(action.type){
-    case: 'setWeAre':
-       return (...state, {weAre: action.payload});
-       break;
-     default:
-       return state;
-   }
+
+  function reducer(state, action) {
+    switch (action.type) {
+      case 'setWeAre':
+        return {...state, weAre: action.payload};
+        break;
+      default:
+        return state;
+    }
   }
   useEffect(() => {
     loading.current = false
   }, [loaded]);
+
   useEffect(() => {
-    if (weAre) return;
+    if (state.weAre) return;
     getWhoWeAre()
   }, []);
 
   const getWhoWeAre = () => {
-    if(weAre)return;
+    if (state.weAre) return;
     var options = {
       method: "GET",
       headers: {
@@ -84,10 +85,10 @@ export default function HomePage({...props}) {
                                 </CardHeader>
                                 <CardBody>
                                   {
-                                    (weAre)
+                                    (state.weAre)
                                       ? localStorage.getItem('language') == 'ru'
-                                      ? ReactHtmlParser(draftToHtml(JSON.parse(weAre.text_ru)))
-                                      : ReactHtmlParser(draftToHtml(JSON.parse(weAre.text_en)))
+                                      ? ReactHtmlParser(draftToHtml(JSON.parse(state.weAre.text_ru)))
+                                      : ReactHtmlParser(draftToHtml(JSON.parse(state.weAre.text_en)))
                                       : ''
                                   }
 

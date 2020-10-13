@@ -2,48 +2,16 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="47a4bb5e-0c63-4432-b239-bb4cf9c0c50d" name="Default Changelist" comment="Added LocationChange.js,&#10;Added useRef to AdminNavbar.js&#10;Updated Pilots.js">
-      <change afterPath="$PROJECT_DIR$/src/context.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/views/Modal/LocationChange.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.github/workflows/node.js.yml" beforeDir="false" afterPath="$PROJECT_DIR$/.github/workflows/node.js.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/deployment.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/deployment.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vapbd2.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vapbd2.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/webServers.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/webServers.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/debug.log" beforeDir="false" afterPath="$PROJECT_DIR$/debug.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/.htaccess" beforeDir="false" afterPath="$PROJECT_DIR$/public/.htaccess" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/.htaccess" beforeDir="false" afterPath="$PROJECT_DIR$/src/.htaccess" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/VA_logo.svg" beforeDir="false" afterPath="$PROJECT_DIR$/src/VA_logo.svg" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/assets/css/custom.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/css/custom.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Api/Api.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Api/Api.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/Headers/Header.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Headers/Header.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Modals/LoginModal.js" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/Navbars/AdminNavbar.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Navbars/AdminNavbar.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Navbars/UserNavbar.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Navbars/UserNavbar.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/News/News.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/News/News.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/TimeTable/TimeTable.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/TimeTable/TimeTable.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ivao_va.svg" beforeDir="false" afterPath="$PROJECT_DIR$/src/ivao_va.svg" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/layouts/MainLayout/MainLayout.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/layouts/MainLayout/MainLayout.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/logo.svg" beforeDir="false" afterPath="$PROJECT_DIR$/src/logo.svg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/routes.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/routes.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/views/AdminViews/AdminRoutes.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/AdminViews/AdminRoutes.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/views/UserViews/About.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/UserViews/About.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/views/UserViews/History.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/UserViews/History.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/views/Modal/LocationChange.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/Modal/LocationChange.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/views/UserViews/HomePage.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/UserViews/HomePage.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/views/UserViews/Pilots.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/UserViews/Pilots.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/views/UserViews/Profile.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/UserViews/Profile.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/views/UserViews/Profile/Booking_List.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/UserViews/Profile/Booking_List.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/views/UserViews/Profile/Booking_New.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/UserViews/Profile/Booking_New.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/views/UserViews/Register.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/views/UserViews/Routes.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/UserViews/Routes.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/views/UserViews/Rules.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/UserViews/Rules.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/views/UserViews/Staff.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/UserViews/Staff.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vapbd2.zip" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -126,6 +94,7 @@
     <property name="DatabaseDriversLRU" value="mariadb" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="ToolWindowRun.ShowToolbar" value="false" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="js.buildTools.gulp.gulp_package_dir" value="$PROJECT_DIR$/node_modules/gulp" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
@@ -135,17 +104,17 @@
     <property name="two.files.diff.last.used.file" value="$PROJECT_DIR$/package-lock.json" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="D:\Documents\vapbd2\src\components\Sidebar" />
-      <recent name="D:\Documents\vapbd2\src\components\Footers" />
-      <recent name="D:\Documents\vapbd2\src\components\Navbars" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="D:\Documents\vapbd2\src\assets\img" />
       <recent name="D:\Documents\vapbd2\src\assets" />
       <recent name="D:\Documents\vapbd2\src\views" />
       <recent name="D:\Documents\vapbd2\src\views\UserViews" />
       <recent name="D:\Documents\vapbd2\src" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\Documents\vapbd2\src\components\Sidebar" />
+      <recent name="D:\Documents\vapbd2\src\components\Footers" />
+      <recent name="D:\Documents\vapbd2\src\components\Navbars" />
     </key>
   </component>
   <component name="RunAnythingCache">
@@ -217,6 +186,7 @@
       <workItem from="1602099921662" duration="22633000" />
       <workItem from="1602346910781" duration="32841000" />
       <workItem from="1602518653616" duration="20468000" />
+      <workItem from="1602613827777" duration="4083000" />
     </task>
     <servers />
   </component>
@@ -228,7 +198,9 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State />
+            <State>
+              <option name="COLUMN_ORDER" />
+            </State>
           </value>
         </entry>
       </map>
@@ -281,10 +253,10 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="1034" y="125" key="CommitChangelistDialog2/0.0.1920.1040@0.0.1920.1040" timestamp="1602539130888" />
-    <state width="918" height="466" key="DebuggerActiveHint" timestamp="1602536078613">
+    <state width="918" height="466" key="DebuggerActiveHint" timestamp="1602616400314">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="918" height="466" key="DebuggerActiveHint/0.0.1920.1040@0.0.1920.1040" timestamp="1602536078613" />
+    <state width="918" height="466" key="DebuggerActiveHint/0.0.1920.1040@0.0.1920.1040" timestamp="1602616400314" />
     <state x="976" y="109" width="840" height="838" key="DiffContextDialog" timestamp="1602538792110">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -301,54 +273,54 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="1222" y="444" key="Github.CreateGistDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1602447560212" />
-    <state width="1877" height="236" key="GridCell.Tab.0.bottom" timestamp="1602538625269">
+    <state width="1100" height="300" key="GridCell.Tab.0.bottom" timestamp="1602617065836">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="236" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1602538625269" />
-    <state width="1877" height="236" key="GridCell.Tab.0.center" timestamp="1602538625269">
+    <state width="1100" height="300" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1602617065836" />
+    <state width="1100" height="300" key="GridCell.Tab.0.center" timestamp="1602617065836">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="236" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1602538625269" />
-    <state width="1877" height="236" key="GridCell.Tab.0.left" timestamp="1602538625268">
+    <state width="1100" height="300" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1602617065836" />
+    <state width="1100" height="300" key="GridCell.Tab.0.left" timestamp="1602617065836">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="236" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1602538625268" />
-    <state width="1877" height="236" key="GridCell.Tab.0.right" timestamp="1602538625269">
+    <state width="1100" height="300" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1602617065836" />
+    <state width="1100" height="300" key="GridCell.Tab.0.right" timestamp="1602617065836">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="236" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1602538625269" />
-    <state width="1877" height="236" key="GridCell.Tab.1.bottom" timestamp="1602538625269">
+    <state width="1100" height="300" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1602617065836" />
+    <state width="1100" height="300" key="GridCell.Tab.1.bottom" timestamp="1602617065836">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="236" key="GridCell.Tab.1.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1602538625269" />
-    <state width="1877" height="236" key="GridCell.Tab.1.center" timestamp="1602538625269">
+    <state width="1100" height="300" key="GridCell.Tab.1.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1602617065836" />
+    <state width="1100" height="300" key="GridCell.Tab.1.center" timestamp="1602617065836">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="236" key="GridCell.Tab.1.center/0.0.1920.1040@0.0.1920.1040" timestamp="1602538625269" />
-    <state width="1877" height="236" key="GridCell.Tab.1.left" timestamp="1602538625269">
+    <state width="1100" height="300" key="GridCell.Tab.1.center/0.0.1920.1040@0.0.1920.1040" timestamp="1602617065836" />
+    <state width="1100" height="300" key="GridCell.Tab.1.left" timestamp="1602617065836">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="236" key="GridCell.Tab.1.left/0.0.1920.1040@0.0.1920.1040" timestamp="1602538625269" />
-    <state width="1877" height="236" key="GridCell.Tab.1.right" timestamp="1602538625269">
+    <state width="1100" height="300" key="GridCell.Tab.1.left/0.0.1920.1040@0.0.1920.1040" timestamp="1602617065836" />
+    <state width="1100" height="300" key="GridCell.Tab.1.right" timestamp="1602617065836">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="236" key="GridCell.Tab.1.right/0.0.1920.1040@0.0.1920.1040" timestamp="1602538625269" />
-    <state width="1877" height="236" key="GridCell.Tab.2.bottom" timestamp="1602538625269">
+    <state width="1100" height="300" key="GridCell.Tab.1.right/0.0.1920.1040@0.0.1920.1040" timestamp="1602617065836" />
+    <state width="1100" height="300" key="GridCell.Tab.2.bottom" timestamp="1602617065836">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="236" key="GridCell.Tab.2.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1602538625269" />
-    <state width="1877" height="236" key="GridCell.Tab.2.center" timestamp="1602538625269">
+    <state width="1100" height="300" key="GridCell.Tab.2.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1602617065836" />
+    <state width="1100" height="300" key="GridCell.Tab.2.center" timestamp="1602617065836">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="236" key="GridCell.Tab.2.center/0.0.1920.1040@0.0.1920.1040" timestamp="1602538625269" />
-    <state width="1877" height="236" key="GridCell.Tab.2.left" timestamp="1602538625269">
+    <state width="1100" height="300" key="GridCell.Tab.2.center/0.0.1920.1040@0.0.1920.1040" timestamp="1602617065836" />
+    <state width="1100" height="300" key="GridCell.Tab.2.left" timestamp="1602617065836">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="236" key="GridCell.Tab.2.left/0.0.1920.1040@0.0.1920.1040" timestamp="1602538625269" />
-    <state width="1877" height="236" key="GridCell.Tab.2.right" timestamp="1602538625269">
+    <state width="1100" height="300" key="GridCell.Tab.2.left/0.0.1920.1040@0.0.1920.1040" timestamp="1602617065836" />
+    <state width="1100" height="300" key="GridCell.Tab.2.right" timestamp="1602617065836">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="236" key="GridCell.Tab.2.right/0.0.1920.1040@0.0.1920.1040" timestamp="1602538625269" />
+    <state width="1100" height="300" key="GridCell.Tab.2.right/0.0.1920.1040@0.0.1920.1040" timestamp="1602617065836" />
     <state x="781" y="354" key="NewPhpClassDialog" timestamp="1599395922678">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -434,9 +406,10 @@
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="javascript">
-          <url>file://$PROJECT_DIR$/src/views/UserViews/Profile/Booking_New.js</url>
-          <line>193</line>
-          <option name="timeStamp" value="83" />
+          <url>file://$PROJECT_DIR$/src/components/Headers/Header.js</url>
+          <line>22</line>
+          <properties lambdaOrdinal="-1" />
+          <option name="timeStamp" value="98" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

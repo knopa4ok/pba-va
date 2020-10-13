@@ -32,8 +32,13 @@
     font-family:TablefontRegular !important;
     font-size: calc(1.2vw + 0.6em) !important;
 }
-#FlightTimeTable-ru tbody{
-    font-family:DS-Digital !important;
+#FlightTimeTable-ru tbody {
+    font-family: DS-Digital !important;
+}
+
+#FlightTimeTable-ru tbody > tr > td:last-child {
+    font-family: TablefontRegular !important;
+    font-size: calc(1.2vw + 0.6em) !important;
 }
 
 /*#FlightTimeTable > .row:not(:first-child), #FlightTimeTable >.row:not(:nth-child(2)){

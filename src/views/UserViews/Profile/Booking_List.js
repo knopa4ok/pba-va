@@ -31,7 +31,7 @@ export default function BookingsList(arr){
             <tr style={{cursor: 'pointer'}} key={shortid()} onClick={() => {hist.replace('/profile/booking/'+prop.id); hist.go(0);}}>
               <td style={{fontSize: `1.2em`, fontWeight: `bold`}}>
                 {
-                  (prop.charter == 0)
+                  (prop.charter === 1)
                     ? localStorage.getItem("language") == "ru"? 'Чартер' : 'Charter'
                     : localStorage.getItem("language") == "ru"? 'Маршрут ВК' : 'VA route'
                 }</td>
