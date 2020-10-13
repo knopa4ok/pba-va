@@ -1,4 +1,4 @@
-import React, {useState, useEffect, useRef, useMemo} from "react";
+import React, {useState, useEffect, useRef, useReducer} from "react";
 // reactstrap components
 import {
     Card,
@@ -23,9 +23,19 @@ import PageLoading from "../PageLoading";
 
 export default function HomePage({...props}) {
 
-  const [weAre, setWeAre] = useState(null);
+  const [state, dispatch] = useReducer(reducer, null);
   const [loaded, setLoaded] = useState(true);
   const loading = useRef(false);
+  
+  const reducer = (state, action){
+   switch(action.type){
+    case: 'setWeAre':
+       return (...state, {weAre: action.payload});
+       break;
+     default:
+       return state;
+   }
+  }
   useEffect(() => {
     loading.current = false
   }, [loaded]);
@@ -34,7 +44,8 @@ export default function HomePage({...props}) {
     getWhoWeAre()
   }, []);
 
-  const getWhoWeAre = useMemo(() => {
+  const getWhoWeAre = () => {
+    if(weAre)return;
     var options = {
       method: "GET",
       headers: {
@@ -46,12 +57,13 @@ export default function HomePage({...props}) {
       .then(res => res.json())
       .then((result) => {
         if (result) {
-          //setContext({...context, whoweare: result});
-          setWeAre(result);
+          dispatch({
+          type: 'setWeAre',
+          payload: result
+          });
         }
-
       });
-  },[weAre]);
+  };
 
 
   if(props.user.vid && props.pilot && props.pilot.length == 0)return <PageLoading/>;
