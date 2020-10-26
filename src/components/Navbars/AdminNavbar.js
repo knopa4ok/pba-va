@@ -37,7 +37,7 @@ export default function AdminNavbar({...props}) {
     }
   }
 
-  if(!props.user.access)return;
+  //if(!props.user.access)return;
   return (
     <>
     <Card className={'card-profile shadow mt-3'} >
@@ -45,14 +45,15 @@ export default function AdminNavbar({...props}) {
         <Nav
           className="flex-column navbar-light bg-white"
           expand={'sm'}>
-          <NavItem key={shortid()} className='p-2' style={{cursor: 'pointer'}}>
-            <NavLink style={{fontSize: 'calc(0.5vw + 0.4em)'}} onClick={() => {
-              setModalContent('staff')
-            }}>
-              <i className="fa fa-users text-info fa-lg mr-3"/>
-              {localStorage.getItem('language') == 'ru' ? 'Add to staff' : 'Назначить  в стафф'}
-            </NavLink>
-          </NavItem>
+          {(props.user.access) ?
+            <NavItem key={shortid()} className='p-2' style={{cursor: 'pointer'}}>
+              <NavLink style={{fontSize: 'calc(0.5vw + 0.4em)'}} onClick={() => {
+                setModalContent('staff')
+              }}>
+                <i className="fa fa-users text-info fa-lg mr-3"/>
+                {localStorage.getItem('language') == 'ru' ? 'Add to staff' : 'Назначить  в стафф'}
+              </NavLink>
+            </NavItem> : <span></span>}
           <NavItem key={shortid()} className='p-2' style={{cursor: 'pointer'}}>
             <NavLink style={{fontSize: 'calc(0.5vw + 0.4em)'}} onClick={() => {
               setModalContent('location')

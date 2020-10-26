@@ -59,8 +59,9 @@ export default function LocationChange({...props}) {
       .then(res => res.json())
       .then(json => {
         var res = json;
+        props.toggleModal();
       });
-    props.toggleModal();
+
   };
 
   return (

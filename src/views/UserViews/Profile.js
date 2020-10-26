@@ -142,15 +142,15 @@ export default function Profile({...props}){
                   </div>
                   <div>
                     {
-                      (info && info.pilot_location_icao)? info.pilot_location_name + " (" + info.pilot_location_icao + ")" : ""
+                      (info && info.pilot_location_icao) ? info.pilot_location_name + " (" + info.pilot_location_icao + ")" : ""
                     }
-                    <i className="ni education_hat mr-2" />
+                    <i className="ni education_hat mr-2"/>
                   </div>
-                  <hr className="my-4" />
+                  <hr className="my-4"/>
                 </div>
               </CardBody>
             </Card>
-            { props.user.access == 1? <AdminNavbar {...props} /> : true }
+            <AdminNavbar {...props} />
           </Col>
           <Col className="order-xl-1" xl="8">
             {content()}
