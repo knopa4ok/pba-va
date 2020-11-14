@@ -3,12 +3,10 @@
   <component name="ChangeListManager">
     <list default="true" id="47a4bb5e-0c63-4432-b239-bb4cf9c0c50d" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/debug.log" beforeDir="false" afterPath="$PROJECT_DIR$/debug.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Navbars/AdminNavbar.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Navbars/AdminNavbar.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Sidebar/Sidebar.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Sidebar/Sidebar.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/views/Modal/LocationChange.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/Modal/LocationChange.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/views/UserViews/Profile.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/UserViews/Profile.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/variables/charts.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/variables/charts.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/views/UserViews/History.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/UserViews/History.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -94,25 +92,25 @@
     <property name="ToolWindowRun.ShowToolbar" value="false" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="js.buildTools.gulp.gulp_package_dir" value="$PROJECT_DIR$/node_modules/gulp" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/public" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="settings.editor.selected.configurable" value="project.propVCSSupport.Mappings" />
     <property name="ts.external.directory.path" value="D:\Documents\vapbd2\node_modules\typescript\lib" />
     <property name="two.files.diff.last.used.file" value="$PROJECT_DIR$/package-lock.json" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="D:\Documents\vapbd2\public" />
-      <recent name="D:\Documents\vapbd2\src\components\Sidebar" />
-      <recent name="D:\Documents\vapbd2\src\components\Footers" />
-      <recent name="D:\Documents\vapbd2\src\components\Navbars" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="D:\Documents\vapbd2\src\assets\img" />
       <recent name="D:\Documents\vapbd2\src\assets" />
       <recent name="D:\Documents\vapbd2\src\views" />
       <recent name="D:\Documents\vapbd2\src\views\UserViews" />
       <recent name="D:\Documents\vapbd2\src" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\Documents\vapbd2\public" />
+      <recent name="D:\Documents\vapbd2\src\components\Sidebar" />
+      <recent name="D:\Documents\vapbd2\src\components\Footers" />
+      <recent name="D:\Documents\vapbd2\src\components\Navbars" />
     </key>
   </component>
   <component name="RunAnythingCache">
@@ -187,7 +185,8 @@
       <workItem from="1602613827777" duration="12764000" />
       <workItem from="1602782047548" duration="2143000" />
       <workItem from="1602850115324" duration="27000" />
-      <workItem from="1603727840900" duration="5361000" />
+      <workItem from="1603727840900" duration="30409000" />
+      <workItem from="1604393767978" duration="33213000" />
     </task>
     <task id="LOCAL-00001" summary="Added LocationChange.js,&#10;Added useRef to AdminNavbar.js&#10;Updated Pilots.js">
       <created>1602618262698</created>
@@ -196,7 +195,14 @@
       <option name="project" value="LOCAL" />
       <updated>1602618262698</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Removed admin access for pilot location change">
+      <created>1603744237958</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1603744237958</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -218,7 +224,8 @@
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <MESSAGE value="Added LocationChange.js,&#10;Added useRef to AdminNavbar.js&#10;Updated Pilots.js" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added LocationChange.js,&#10;Added useRef to AdminNavbar.js&#10;Updated Pilots.js" />
+    <MESSAGE value="Removed admin access for pilot location change" />
+    <option name="LAST_COMMIT_MESSAGE" value="Removed admin access for pilot location change" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
   </component>
   <component name="WindowStateProjectService">
@@ -258,14 +265,14 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="690" y="278" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1599385481742" />
-    <state x="1034" y="125" key="CommitChangelistDialog2" timestamp="1602618260523">
+    <state x="1034" y="125" key="CommitChangelistDialog2" timestamp="1605344114454">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="1034" y="125" key="CommitChangelistDialog2/0.0.1920.1040@0.0.1920.1040" timestamp="1602618260523" />
-    <state width="918" height="466" key="DebuggerActiveHint" timestamp="1602616400314">
+    <state x="1034" y="125" key="CommitChangelistDialog2/0.0.1920.1040@0.0.1920.1040" timestamp="1605344114454" />
+    <state width="918" height="466" key="DebuggerActiveHint" timestamp="1603988108399">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="918" height="466" key="DebuggerActiveHint/0.0.1920.1040@0.0.1920.1040" timestamp="1602616400314" />
+    <state width="918" height="466" key="DebuggerActiveHint/0.0.1920.1040@0.0.1920.1040" timestamp="1603988108399" />
     <state x="976" y="109" width="840" height="838" key="DiffContextDialog" timestamp="1602538792110">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -274,46 +281,46 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="1052" y="92" width="776" height="856" key="DirDiffDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1599489324390" />
-    <state x="222" y="274" key="FileChooserDialogImpl" timestamp="1602492073740">
+    <state x="222" y="274" key="FileChooserDialogImpl" timestamp="1603876016253">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="222" y="274" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1602492073740" />
+    <state x="222" y="274" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1603876016253" />
     <state x="1222" y="444" key="Github.CreateGistDialog" timestamp="1602447560212">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="1222" y="444" key="Github.CreateGistDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1602447560212" />
-    <state width="1100" height="268" key="GridCell.Tab.0.bottom" timestamp="1602773675048">
+    <state width="916" height="305" key="GridCell.Tab.0.bottom" timestamp="1603988128962">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1100" height="268" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1602773675048" />
-    <state width="1100" height="268" key="GridCell.Tab.0.center" timestamp="1602773675048">
+    <state width="916" height="305" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1603988128962" />
+    <state width="916" height="305" key="GridCell.Tab.0.center" timestamp="1603988128961">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1100" height="268" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1602773675048" />
-    <state width="1100" height="268" key="GridCell.Tab.0.left" timestamp="1602773675048">
+    <state width="916" height="305" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1603988128961" />
+    <state width="916" height="305" key="GridCell.Tab.0.left" timestamp="1603988128961">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1100" height="268" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1602773675048" />
-    <state width="1100" height="268" key="GridCell.Tab.0.right" timestamp="1602773675048">
+    <state width="916" height="305" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1603988128961" />
+    <state width="916" height="305" key="GridCell.Tab.0.right" timestamp="1603988128962">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1100" height="268" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1602773675048" />
-    <state width="1100" height="300" key="GridCell.Tab.1.bottom" timestamp="1602773674747">
+    <state width="916" height="305" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1603988128962" />
+    <state width="916" height="305" key="GridCell.Tab.1.bottom" timestamp="1603988128962">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1100" height="300" key="GridCell.Tab.1.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1602773674747" />
-    <state width="1100" height="300" key="GridCell.Tab.1.center" timestamp="1602773674747">
+    <state width="916" height="305" key="GridCell.Tab.1.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1603988128962" />
+    <state width="916" height="305" key="GridCell.Tab.1.center" timestamp="1603988128962">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1100" height="300" key="GridCell.Tab.1.center/0.0.1920.1040@0.0.1920.1040" timestamp="1602773674747" />
-    <state width="1100" height="300" key="GridCell.Tab.1.left" timestamp="1602773674747">
+    <state width="916" height="305" key="GridCell.Tab.1.center/0.0.1920.1040@0.0.1920.1040" timestamp="1603988128962" />
+    <state width="916" height="305" key="GridCell.Tab.1.left" timestamp="1603988128962">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1100" height="300" key="GridCell.Tab.1.left/0.0.1920.1040@0.0.1920.1040" timestamp="1602773674747" />
-    <state width="1100" height="300" key="GridCell.Tab.1.right" timestamp="1602773674747">
+    <state width="916" height="305" key="GridCell.Tab.1.left/0.0.1920.1040@0.0.1920.1040" timestamp="1603988128962" />
+    <state width="916" height="305" key="GridCell.Tab.1.right" timestamp="1603988128962">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1100" height="300" key="GridCell.Tab.1.right/0.0.1920.1040@0.0.1920.1040" timestamp="1602773674747" />
+    <state width="916" height="305" key="GridCell.Tab.1.right/0.0.1920.1040@0.0.1920.1040" timestamp="1603988128962" />
     <state width="1100" height="300" key="GridCell.Tab.2.bottom" timestamp="1602773674748">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>

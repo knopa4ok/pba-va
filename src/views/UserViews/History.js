@@ -22,15 +22,33 @@ export default function History({...props}){
         }
       }))
   };
-  const openValidation = (e) =>{
+  const openValidation = (e) => {
     e.preventDefault();
-    if(props.user.access == 1){
+    if (props.user.access == 1) {
       window.location.pathname = '/admin/flight/' + e.target.parentElement.id;
     }
+  };
+
+  function getStatus(id) {
+    switch (id) {
+      case 0:
+        return localStorage.getItem('language') == 'ru' ? "Ожидает валидацию" : 'Pending validation';
+        break;
+      case 1:
+        return localStorage.getItem('language') == 'ru' ? "Валидирован" : 'Validated';
+        break;
+      case 2:
+        return localStorage.getItem('language') == 'ru' ? "Завалидирован(А)" : 'Validate(A)';
+        break;
+      case -1:
+        return localStorage.getItem('language') == 'ru' ? "Отклонен" : 'Rejected';
+        break;
+    }
   }
+
   return (
     <>
-    {/* Page content */}
+      {/* Page content */}
       <Container className="mt--7" fluid>
         <Card className="p-3">
           <CardHeader>
@@ -72,12 +90,7 @@ export default function History({...props}){
                       <td>{prop.fleet}</td>
                       <td>{prop.dep_icao} - {prop.arr_icao}</td>
                       <td>{prop.duration}</td>
-                      <td>{
-                        (prop.validated == 1)
-                        ?localStorage.getItem('language') == 'ru'? "Валидирован" : 'Validated'
-                        : (prop.validated == 0)
-                          ?localStorage.getItem('language') == 'ru'? "Ожидает валидацию" : 'Pending validation'
-                          :localStorage.getItem('language') == 'ru'? "Отклонен" : 'Rejected'
+                      <td>{getStatus(prop.validated)
                       }
                       </td>
                     </tr>
